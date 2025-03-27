@@ -1,0 +1,49 @@
+# Python bytecode files
+*.pyc
+*.pyo
+__pycache__/
+
+# Django migrations
+*/migrations/*
+
+# Django static files (if they are generated)
+/static/
+/media/
+
+# venv
+/venv/
+venv/
+env/
+/env/
+
+# Environment variables
+.env
+
+# Database files
+*.sqlite3
+
+# VS Code files
+.vscode/
+
+# PyCharm files
+.idea/
+
+# macOS specific files
+.DS_Store
+
+# Windows specific files
+Thumbs.db
+
+# Log files
+*.log
+
+# Django secret key (it is not a good practice to commit this file)
+*.key
+
+# Temporary files
+*.bak
+*.swp
+*.swo
+
+# pipenv
+Pipfile.lock
