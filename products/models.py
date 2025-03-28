@@ -23,6 +23,7 @@ class Product(models.Model):
     )
     created_at = models.DateTimeField(auto_now=True)
 
+
 class ProductVarient(models.Model):
     products = models.ForeignKey(
         Product, on_delete=models.SET_NULL, null=True,

@@ -46,4 +46,8 @@ urlpatterns = [
     path('userapi/', 
          include('usermanagement.urls')
          ),
+    path(
+        'products/',
+            include('products.urls'),
+    )
 ]
