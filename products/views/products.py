@@ -29,4 +29,3 @@ class ProductListAPI(APIView):
         cache.set(cache_key, serializer.data, timeout=9000)
         print('other')
         return Response(serializer.data)
-
