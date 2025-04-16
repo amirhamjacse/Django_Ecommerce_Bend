@@ -185,3 +185,4 @@ class DeleteUser(APIView):
 
         user.delete()
         return Response({"status": True, "message": "User deleted successfully"})
+        
