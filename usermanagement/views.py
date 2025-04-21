@@ -101,6 +101,7 @@ class ForgotPassword(APIView):
             otp = str(random.randint(100000, 999999))
             user.otp = otp
             print(otp, 'otp-----')
+
             user.otp_expired_at = now() + timedelta(minutes=10)  # OTP valid for 10 minutes
             user.save()
 
@@ -185,3 +186,24 @@ class DeleteUser(APIView):
 
         user.delete()
         return Response({"status": True, "message": "User deleted successfully"})
+
+
+# def post():
+#     serialier = serialer(data=request.data)
+#     if serialier.is_valid():
+#         serialier.save()
+#         return Response(
+#                 {"status": True, "message": "User created successfully", "data": serialier.data},
+#                 status=status.HTTP_201_CREATED)
+
+#     return Response()
+
+# def get():
+#     query = a.objects.all()
+#     serializer = serialozer(query, many=true)
+#     return Response(serializer.data)
+
+#     users = User.objects.all()
+#         serializer = UserSerializer(users, many=True)
+#         return Response(
+#             {"status": True, "message": "Users fetched successfully", "data": serializer.data})
