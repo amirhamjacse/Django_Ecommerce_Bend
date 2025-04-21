@@ -186,24 +186,3 @@ class DeleteUser(APIView):
 
         user.delete()
         return Response({"status": True, "message": "User deleted successfully"})
-
-
-# def post():
-#     serialier = serialer(data=request.data)
-#     if serialier.is_valid():
-#         serialier.save()
-#         return Response(
-#                 {"status": True, "message": "User created successfully", "data": serialier.data},
-#                 status=status.HTTP_201_CREATED)
-
-#     return Response()
-
-# def get():
-#     query = a.objects.all()
-#     serializer = serialozer(query, many=true)
-#     return Response(serializer.data)
-
-#     users = User.objects.all()
-#         serializer = UserSerializer(users, many=True)
-#         return Response(
-#             {"status": True, "message": "Users fetched successfully", "data": serializer.data})
