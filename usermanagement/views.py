@@ -184,5 +184,6 @@ class DeleteUser(APIView):
                 {"status": False, "message": "User not found"},
                 status=status.HTTP_404_NOT_FOUND)
 
+
         user.delete()
         return Response({"status": True, "message": "User deleted successfully"})

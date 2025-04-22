@@ -11,3 +11,11 @@ class ProductSerializer(serializers.ModelSerializer):
             'description',
             'created_at',
         ]
+
+
+class TestSeri(serializers.ModelSerializer):
+    class Meta:
+        model = Product
+        fields =[
+            'category',
+        ]
